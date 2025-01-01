@@ -4,6 +4,6 @@ function FindProxyForURL(url, host) {
 	if (isPlainHostName(host)) {
         return "DIRECT";
     }
-    return "DIRECT; PROXY mizukilenovo:10809; PROXY akiyamaworkpc:10809"; 
+    return "PROXY mizukilenovo:10809; PROXY akiyamaworkpc:10809; DIRECT"; 
 }
 
