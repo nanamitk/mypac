@@ -140,7 +140,7 @@ function FindProxyForURL(url, host) {
         return proxy;
     } else if (radixTree.search(ipToBinary(ip))) {
         debug('匹配到直连IP', host, ip);
-        return direct;
+        return proxy;
     }
 
     debug('未命中任何规则', host, ip);
