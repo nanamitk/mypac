@@ -127,7 +127,7 @@ function FindProxyForURL(url, host) {
         return direct;
     } else if (isPrivateIp(host)) {
         debug('命中私有 IP 地址', host, 'N/A');
-        return proxy;
+        return direct;
     }
 
     ip = isIpAddress(host) ? host : dnsResolve(host);
@@ -140,7 +140,7 @@ function FindProxyForURL(url, host) {
         return proxy;
     } else if (radixTree.search(ipToBinary(ip))) {
         debug('匹配到直连IP', host, ip);
-        return proxy;
+        return direct;
     }
 
     debug('未命中任何规则', host, ip);
