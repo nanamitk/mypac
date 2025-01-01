@@ -1,4 +1,4 @@
-var proxy = "SOCKS5 mizukilenovo:10809";
+var proxy = "SOCKS mizukilenovo:10809";
 
 var direct = 'DIRECT';
 
