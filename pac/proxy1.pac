@@ -122,10 +122,10 @@ function FindProxyForURL(url, host) {
     } else if (isInProxyDomain(host)) {
         debug('命中代理域名', host, 'N/A');
         return proxy;
+    } else if (isPlainHostName(host) || host === 'localhost' || isLocalTestDomain(host)) {
+        debug('命中本地主机名或本地tld', host, 'N/A');
+        return direct;
     }
-    // } else if (isPlainHostName(host) || host === 'localhost' || isLocalTestDomain(host)) {
-    //     debug('命中本地主机名或本地tld', host, 'N/A');
-    //     return direct;
     // } else if (isPrivateIp(host)) {
     //     debug('命中私有 IP 地址', host, 'N/A');
     //     return direct;
