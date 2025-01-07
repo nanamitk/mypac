@@ -1,0 +1,4 @@
+payload:
+  - 'hanime1.me'
+  - '18comic.vip'
+
