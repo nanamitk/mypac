@@ -137,7 +137,7 @@ function FindProxyForURL(url, host) {
         return proxy;
     } else if (isPrivateIp(ip)) {
         debug('域名解析后命中私有 IP 地址', host, ip);
-        return proxy;
+        return direct;
     } else if (radixTree.search(ipToBinary(ip))) {
         debug('匹配到直连IP', host, ip);
         return direct;
